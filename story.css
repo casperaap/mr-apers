@@ -1,0 +1,149 @@
+body {
+    background: #000;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #171717;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-container span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.button-container button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #823DC1;
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.button-container button img {
+    margin-right: 3px;
+    height: 10px;
+    width: 20px;
+    transform: scaleX(-1);
+}
+
+.button-container button:hover {
+    background-color: #823DC1;
+    color: #fff;
+}
+
+.profile {
+    position: absolute;
+    top: 100px;
+    left: 80px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: grey;
+    font-size: 19px;
+}
+
+.profile img {
+    color: grey;
+    height: 22px;
+}
+
+.profile h4 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: normal;
+    color: inherit;
+}
+
+main {
+    padding: 80px;
+    margin-top: 20px;
+}
+
+h1 {
+    color: white;
+    font-size: 80px;
+}
+
+h1 span {
+    color: #823DC1;
+}
+
+p {
+    color: #C4C4C4;
+    text-align: left;
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+.centered-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.stretched-image {
+    display: block;
+    width: 100%;
+    transform: rotate(180deg);
+    margin-top: 20px;
+}
+
+/* New Pattern Section */
+.pattern-section {
+    background-color: #1B1919;
+    padding: 50px 0;
+}
+
+.pattern-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 40px); /* Repeat pattern across the width */
+    grid-auto-rows: 40px; /* Set consistent row height */
+    justify-content: center; /* Center the grid horizontally */
+    gap: 10px; /* Space between each symbol */
+}
+
+.pattern-container::before {
+    content: ''; /* Filler for symmetrical offset rows */
+    grid-column: 1 / -1; /* Span entire row */
+}
+
+.pattern-container::after {
+    content: ''; /* Filler for symmetrical offset rows */
+    grid-column-start: -1 / +2; /* Item's balancing rows end */
+}
+
+.pattern-container > div {
+    background-image: url("public/x-symbol.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    transparent-layer opacity fit aligns ensure bounds }
