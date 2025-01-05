@@ -153,7 +153,7 @@ header {
 }
 
 .hero .content .card h4 {
-    color: gray;
+    color: #C4C4C4;
     margin-left: 8px;
     margin-right: 8px;
     margin-top: 32px;
@@ -177,7 +177,6 @@ header {
     width: calc(100% - 20px); /* Ensure the input fields don't touch the edges */
     padding: 15px;
     border-radius: 5px;
-    border: 1px solid #823DC1;
     background-color: #fff;
     color: #000;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
@@ -197,8 +196,7 @@ header {
 
 .hero .content .card input:focus + label,
 .hero .content .card input:not(:placeholder-shown) + label {
-    top: -10px;
-    left: 10px;
+    display: none;
     font-size: 0.8rem;
     color: #823DC1;
 }
@@ -209,10 +207,13 @@ header {
 }
 
 .newsletter-button {
+    font-size: 18px;
+    text-align: center;
     background-color: #823DC1;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    height: 51px;
+    width: 233px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
@@ -222,13 +223,16 @@ header {
     margin-top: 24px;
     margin-left: 35px;
 }
+.newsletter-button strong {
+    margin-left: 25px;
+}
 
 .newsletter-container1 .button-arrow {
     height: 25px; /* Increased height */
     width: 30px; /* Increased width */
     transform: scaleX(-1) rotate(-35deg); /* Flip horizontally */
     position: relative;
-    top: 32px; /* Move it down slightly */
+    top: 42px; /* Move it down slightly */
 }
 
 .newsletter-button:hover {
@@ -236,7 +240,7 @@ header {
 }
 
 .small-text {
-    color: gray;
+    color: #C4C4C4;
     font-size: 0.7rem;
     margin-top: 32px;
     margin-bottom: 32px;
@@ -355,7 +359,7 @@ margin-bottom: 32px;
 
 
 .about-content h2 {
-    font-size: 1.6rem; /* Header-sized text */
+    font-size: 2.3rem; /* Header-sized text */
     color: #fff;
     margin-top: 20px;
     margin-bottom: 32px;
@@ -527,7 +531,7 @@ margin-bottom: 32px;
     position: relative;
     background: url('public/background.png') no-repeat center center;
     background-size: 100%; /* Ensure the background image covers the entire section */
-    padding: 130px 32px;
+    padding: 130px 13.74100px;
     text-align: center;
     overflow: hidden; /* Ensure the background stays within the section */
 }
@@ -585,7 +589,6 @@ margin-bottom: 32px;
 
 .newsletter-container {
     margin-top: 3%;
-    display: flex;
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center elements horizontally */
     border: solid 2px #823DC1;
@@ -604,38 +607,44 @@ margin-bottom: 32px;
     font-size: 0.9rem;
     color: #808080;
 }
-
 .input-container2 {
-    display: flex;
     position: relative;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
     margin-bottom: 13px;
-    width: 100%; /* Ensure the container is full width */
-    max-width: 300px; /* Increase the max width of the container */
-    margin-right: 100px;
+    width: 100%; /* Ensure the container spans the full width */
+    max-width: 300px; /* Set a maximum width for the container */
+    padding: 0; /* Remove extra padding */
+    box-sizing: border-box; /* Ensure content stays within bounds */
 }
 
 .input-container2 input,
 .input-container2 textarea {
-    width: 80%; /* Set width to 100% of the container */
-    padding: 15px; /* Adjust padding if necessary */
+    width: calc(100% - 32px); /* Subtract 16px from both left and right */
+    margin: 0 16px; /* Add 16px margin to both sides */
+    padding: 15px; /* Keep padding for input content */
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #fff;
     color: #000;
-    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    box-sizing: border-box; /* Ensure padding and borders are included in the width */
 }
+
+.input-container2 input {
+    width: 300px;
+    margin-left: 25px;
+
+}
+
 .input-container2 textarea {
-    margin-top: -9px;
-    height: 200px; /* Adjust the height of the textarea */
+    margin-left: 25px;
+    width: 300px;
+    height: 200px; /* Adjust the height for the textarea */
     resize: none; /* Prevent resizing */
 }
 
 .input-container2 label {
     position: absolute;
     top: 50%;
-    left: 30px;
+    left: 25px; /* Position label based on input margin */
     transform: translateY(-50%);
     padding: 0 5px;
     color: #999;
@@ -643,12 +652,12 @@ margin-bottom: 32px;
     transition: 0.2s;
 }
 
+
 .input-container2 input:focus + label,
 .input-container2 input:not(:placeholder-shown) + label,
 .input-container2 textarea:focus + label,
 .input-container2 textarea:not(:placeholder-shown) + label {
-    top: -10px;
-    left: 10px;
+    display: none;
     font-size: 0.8rem;
     color: #ffffff;
 }
@@ -657,10 +666,11 @@ margin-bottom: 32px;
     background-color: #823DC1;
     color: #fff;
     border: none;
-    padding: 18px 20px;
+    height: 51px;
+    width: 233;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.8rem;
     width: 60%;
     margin-top: 29px;
     margin-bottom: 32px;
@@ -724,7 +734,7 @@ display: none;
     }
 
     .pattern-section .newsletter-container .pattern-heading2 {
-        font-size: 1.5rem;
+        font-size: 1.9rem;
         font-weight: bold;
         color: #fff;
         text-align: center;
@@ -734,13 +744,13 @@ display: none;
 
     .pattern-section .newsletter-container .pattern-heading2 .highlight {
         color: #823DC1;
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
 
     .pattern-section .newsletter-container .additional-text {
         display: block;
-        font-size: 0.8rem;
-        color: gray;
+        font-size: 1.2rem;
+        color: #C4C4C4;
         text-align: center;
         margin-bottom: 32px;
     }
@@ -753,7 +763,7 @@ display: none;
 }
 
 .fund-section h2 {
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     margin-top: -30px;
     margin-bottom: 32px;
 }
@@ -774,7 +784,7 @@ display: none;
     border-radius: 5px;
     width: 80%;
     text-align: left;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     margin-bottom: 8px; /* Add space between the cards */
     display: flex;
     align-items: center;
@@ -865,7 +875,7 @@ display: none;
 
 @media (max-width: 768px) {
     .ctasection {
-        padding: 190px 10px;
+        padding: 190px 0px;
     }
 }
 
