@@ -870,6 +870,8 @@ display: none;
 }
 
 .cta-container {
+    margin-left: 32px;
+    margin-right: 32px;
     max-width: 600px;
     text-align: center;
     background: #171717;
@@ -914,7 +916,7 @@ display: none;
     width: 100%;
     max-width: 400px;
     margin-right: 32px;
-    margin-left: 58px;
+    margin-left: 32px;
     margin-top: 48px;
 }
 
