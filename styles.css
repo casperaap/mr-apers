@@ -366,6 +366,8 @@ margin-bottom: 32px;
 }
 
 .dropdown {
+    padding-left: 22px;
+    padding-right: 22px;
     margin: 10px 0; /* Add space above the dropdown to avoid overlap */
     position: relative;
     z-index: 3; /* Ensure dropdown is above the gradient */
@@ -430,7 +432,7 @@ margin-bottom: 32px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    margin: 20px auto; /* Center the button horizontally and add space above */
+    margin: 32px auto; /* Center the button horizontally and add space above */
     display: block; /* Ensure the button is displayed as a block element */
     width: 50%; /* Set the button width */
     text-align: center; /* Center the text */
@@ -525,7 +527,7 @@ margin-bottom: 32px;
     position: relative;
     background: url('public/background.png') no-repeat center center;
     background-size: 100%; /* Ensure the background image covers the entire section */
-    padding: 130px 20px;
+    padding: 130px 32px;
     text-align: center;
     overflow: hidden; /* Ensure the background stays within the section */
 }
@@ -588,7 +590,6 @@ margin-bottom: 32px;
     align-items: center; /* Center elements horizontally */
     border: solid 2px #823DC1;
     background-color: #171717; /* Semi-transparent background */
-    padding: 35px;
     top: 10000%;
     margin-right: 10%;
     border-radius: 10px;
@@ -626,6 +627,7 @@ margin-bottom: 32px;
     box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
 .input-container2 textarea {
+    margin-top: -9px;
     height: 200px; /* Adjust the height of the textarea */
     resize: none; /* Prevent resizing */
 }
@@ -660,6 +662,8 @@ margin-bottom: 32px;
     cursor: pointer;
     font-size: 1rem;
     width: 60%;
+    margin-top: 29px;
+    margin-bottom: 32px;
     text-align: center;
 }
 
@@ -712,7 +716,7 @@ display: none;
 
     .pattern-section .newsletter-container::after {
         content: "Join the newsletter of a 20 year old student that earns 0$ per month...";
-        display: block;
+        display: none;
         font-size: 0.8rem;
         color: gray;
         text-align: center;
@@ -720,16 +724,17 @@ display: none;
     }
 
     .pattern-section .newsletter-container .pattern-heading2 {
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: bold;
         color: #fff;
         text-align: center;
-        margin-bottom: 10px;
+        margin-top: 19px;
+        margin-bottom: 32px;
     }
 
     .pattern-section .newsletter-container .pattern-heading2 .highlight {
         color: #823DC1;
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .pattern-section .newsletter-container .additional-text {
@@ -737,7 +742,7 @@ display: none;
         font-size: 0.8rem;
         color: gray;
         text-align: center;
-        margin-top: 10px;
+        margin-bottom: 32px;
     }
 }
 .fund-section {
@@ -748,9 +753,9 @@ display: none;
 }
 
 .fund-section h2 {
-    font-size: 4rem;
+    font-size: 2.5rem;
     margin-top: -30px;
-    margin-bottom: 70px;
+    margin-bottom: 32px;
 }
 
 .fund-cards {
@@ -761,14 +766,16 @@ display: none;
 }
 
 .fund-card {
+    margin-right: 32px;
+    margin-left: 32px;
     background-color: #171717;
     border: 2px solid #823DC1;
     padding: 20px;
     border-radius: 5px;
-    width: 60%;
+    width: 80%;
     text-align: left;
-    font-size: 1.2rem;
-    margin-bottom: 20px; /* Add space between the cards */
+    font-size: 1rem;
+    margin-bottom: 8px; /* Add space between the cards */
     display: flex;
     align-items: center;
     line-height: 1; /* Adjust line height */
@@ -781,8 +788,8 @@ display: none;
 }
 
 .progress-bar-container {
-    width: 60%;
-    margin-top: -20px !important;
+    width: 90%;
+    margin-top: 32px !important;
     margin: 0 auto;
 }
 
@@ -835,6 +842,7 @@ display: none;
     font-size: 20px;
     cursor: pointer;
     margin: 10px auto;
+    margin-bottom: 32px;
     display: block;
     text-align: center;
     border-radius: 5px;
@@ -842,7 +850,7 @@ display: none;
 .more-info-link {
     text-align: center;
     display: block;
-    margin: 5px auto;
+    margin: 0px auto;
     color: grey;
     font-size: 18px;
 }
@@ -866,7 +874,6 @@ display: none;
     text-align: center;
     background: #171717;
     width: 100%;
-    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     border: solid 2px#5e2a8a;
@@ -876,8 +883,8 @@ display: none;
 }
 
 .cta-container h2 {
-    font-size: 37px;
-    margin-top: -10px;
+    font-size: 32px;
+    margin-top: 19px;
     margin-bottom: 20px;
     color: #ffffff;
 }
@@ -889,21 +896,26 @@ display: none;
 }
 
 .cta-container .cta-points li {
+    margin-left: 32px;
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
     font-size: 16px;
     color: #ffffff;
 }
 
 .cta-container .cta-points img {
     margin-right: 10px;
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
 }
 
 .cta-container form {
-    margin-top: 30px;
+    width: 100%;
+    max-width: 400px;
+    margin-right: 32px;
+    margin-left: 58px;
+    margin-top: 48px;
 }
 
 .input-container {
@@ -948,8 +960,10 @@ display: none;
 
 .cta-button {
     display: inline-block;
-    width: 84%;
-    margin-left: 18px;
+    width: 54%;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    margin-right: 65px;
     color: white;
     padding: 12px 20px;
     font-size: 16px;
