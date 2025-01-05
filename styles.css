@@ -130,6 +130,8 @@ header {
 }
 
 .hero .content .card {
+    padding-left: 8px;
+    padding-right: 8px;
     background-color: #171717;
     border: 2px solid #823DC1;
     margin-left: 60px ;
@@ -325,7 +327,7 @@ margin-bottom: 32px;
 }
 
 .speech-bubble img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
 }
 
@@ -353,9 +355,10 @@ margin-bottom: 32px;
 
 
 .about-content h2 {
-    font-size: 3.5rem; /* Header-sized text */
+    font-size: 2.8rem; /* Header-sized text */
     color: #fff;
     margin-top: 20px;
+    margin-bottom: 32px;
 }
 
 .about-content h2 .highlight {
