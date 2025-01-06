@@ -797,13 +797,14 @@ display: none;
 }
 
 .fund-card {
-    margin-right: 32px;
-    margin-left: 32px;
+    width: 100%;
+    margin-left: 10px;
+    max-width: 246.87px;
     background-color: #171717;
     border: 2px solid #823DC1;
     padding: 17px 1px;
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 32px;
+    padding-right: 32px;
     border-radius: 7px;
     text-align: left;
     font-size: 1rem;
@@ -812,8 +813,6 @@ display: none;
     align-items: center;
     line-height: 1;
 }
-
-
 
 .card-icon {
     margin-right: 10px;

@@ -149,7 +149,7 @@ p {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
     gap: 20px; /* Spacing between cards */
     justify-items: center;
-    padding: 0 25px; /* Space on both sides of the screen */
+    padding: 0 15px; /* Space on both sides of the screen */
     box-sizing: border-box; /* Include padding in the width calculation */
 }
 
@@ -161,8 +161,9 @@ p {
     overflow: hidden;
     padding: 35px;
     padding-bottom: 10px;
-    width: 150%;
-    max-width: 230px; /* Square cards */
+    min-width: 230px;
+    width: 80%;
+    max-width: 300px; /* Square cards */
     display: flex;
     flex-direction: column;
     align-items: center;
