@@ -433,6 +433,7 @@ margin-bottom: 32px;
 }
 
 .contact-button {
+    text-decoration: none;
     background-color: #823DC1;
     color: #fff;
     border: none;
@@ -444,6 +445,10 @@ margin-bottom: 32px;
     display: block; /* Ensure the button is displayed as a block element */
     width: 50%; /* Set the button width */
     text-align: center; /* Center the text */
+}
+.contact-buttontext {
+    text-decoration: none;
+    color: inherit;
 }
 
 .contact-button:hover {
@@ -812,8 +817,8 @@ display: none;
 
 .card-icon {
     margin-right: 10px;
-    width: 50px;
-    height: 50px;
+    width: 41px;
+    height: 41px;
 }
 
 .progress-bar-container {
