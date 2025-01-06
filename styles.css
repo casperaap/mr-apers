@@ -45,6 +45,11 @@ header {
     font-size: 1rem;
 }
 
+.button-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .button-container button img {
     margin-left: 8px; /* Adjusted margin */
     height: 20px; /* Reduced height */
@@ -791,18 +796,19 @@ display: none;
     margin-left: 32px;
     background-color: #171717;
     border: 2px solid #823DC1;
-    padding: 25px 20px;
+    padding: 17px 1px;
     padding-left: 22px;
     padding-right: 22px;
-    border-radius: 5px;
-    width: 80%;
+    border-radius: 7px;
     text-align: left;
     font-size: 1rem;
-    margin-bottom: 8px; /* Add space between the cards */
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
-    line-height: 1; /* Adjust line height */
+    line-height: 1;
 }
+
+
 
 .card-icon {
     margin-right: 10px;
@@ -844,7 +850,7 @@ display: none;
     color: #fff;
 }
 .funded-text {
-    color: gray;
+    color: #C4C4C4;
     margin-top: 10px;
 }
 

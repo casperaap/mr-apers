@@ -13,15 +13,17 @@
             <span>MrApers</span>
         </div>
         <div class="button-container">
+            <a href="index.html">
             <button>
                 <img src="public/rarrow.svg" alt="Wave Icon">
                 Go Back
             </button>
+        </a>
         </div>
     </header>
     <section class="profile">
         <img src="public/rarrow2.svg" alt="go back" class="go-back">
-        <h4>Go Back</h4>
+        <h4><a href="index.html" class="dont">Go Back</a></h4>
     </section>
 
     <main>
@@ -34,8 +36,118 @@
         <img src="public/gradient.png" alt="Stretched and Flipped Image" class="stretched-image">
     </main>
 
-    <section class="pattern-section">
-        <div class="pattern-container"></div>
+    <section class="projects-section">
+        <h2>My <span>Projects</span></h2>
+        <div class="projects-container">
+            <!-- 8 cards -->
+            <div class="card">
+                <img src="https://placehold.co/600x400" alt="Project Placeholder" class="card-image">
+                <div class="card-footer">
+                    <span class="project-number"><strong>Project #1</strong></span>
+                    <button class="down-arrow">
+                        <img src="public/down.svg" alt="Down Arrow">
+                    </button>
+                </div>
+                <div class="card-details">
+                    <p>Details about Project #1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://placehold.co/600x400" alt="Project Placeholder" class="card-image">
+                <div class="card-footer">
+                    <span class="project-number"><strong>Project #2</strong></span>
+                    <button class="down-arrow">
+                        <img src="public/down.svg" alt="Down Arrow">
+                    </button>
+                </div>
+                <div class="card-details">
+                    <p>Details about Project #1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://placehold.co/600x400" alt="Project Placeholder" class="card-image">
+                <div class="card-footer">
+                    <span class="project-number"><strong>Project #3</strong></span>
+                    <button class="down-arrow">
+                        <img src="public/down.svg" alt="Down Arrow">
+                    </button>
+                </div>
+                <div class="card-details">
+                    <p>Details about Project #1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://placehold.co/600x400" alt="Project Placeholder" class="card-image">
+                <div class="card-footer">
+                    <span class="project-number"><strong>Project #4</strong></span>
+                    <button class="down-arrow">
+                        <img src="public/down.svg" alt="Down Arrow">
+                    </button>
+                </div>
+                <div class="card-details">
+                    <p>Details about Project #1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
     </section>
+    <section class="ctasection">
+        <div class="cta-container">
+            <h2><strong>About My <span class="diff">Newsletter</span></strong></h2>
+            <ul class="cta-points">
+                <li><img src="public/checkmark.svg" alt="Checkmark"> <strong>Placeholder text for point 1</strong></li>
+                <li><img src="public/checkmark.svg" alt="Checkmark"> <strong>Placeholder text for point 2</strong></li>
+                <li><img src="public/checkmark.svg" alt="Checkmark"> <strong>Placeholder text for point 3</strong></li>
+                <li><img src="public/checkmark.svg" alt="Checkmark"> <strong>Placeholder text for point 4</strong></li>
+                <li><img src="public/checkmark.svg" alt="Checkmark"> <strong>Placeholder text for point 5</strong></li>
+            </ul>
+            <form>
+                <div class="input-container">
+                    <label for="cta-first-name">First Name</label>
+                    <input type="text" id="cta-first-name" name="first-name" placeholder=" " required>
+                </div>
+                <div class="input-container">
+                    <label for="cta-email">Email Address</label>
+                    <input type="email" id="cta-email" name="email" placeholder=" " required>
+                </div>
+                <button type="submit" class="cta-button" style="background-color: #823DC1;"><strong>Join My Newsletter</strong></button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <hr class="footer-divider">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="public/logo.png" alt="Logo">
+                <span class="footer-logo-text"><strong>MrApers</strong></span>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="footer-link"><strong>My Story</strong></a>
+                <a href="#" class="footer-link"><strong>Privacy Policy</strong></a>
+                <a href="tel:+123456789" class="footer-link"><strong>Phone</strong></a>
+                <a href="mailto:example@example.com" class="footer-link"><strong>Email</strong></a>
+                <a href="https://www.linkedin.com" class="footer-link" target="_blank"><strong>LinkedIn</strong></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const downArrowButtons = document.querySelectorAll(".down-arrow");
+    
+            downArrowButtons.forEach((button) => {
+                button.addEventListener("click", (event) => {
+                    const card = event.target.closest(".card"); // Get the parent card
+                    const details = card.querySelector(".card-details"); // Find the details section
+    
+                    // Toggle the open class to expand/collapse the details
+                    if (details.classList.contains("open")) {
+                        details.classList.remove("open");
+                    } else {
+                        details.classList.add("open");
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
