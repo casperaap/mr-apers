@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="public/logo.png" alt="Logo">
+            <span>MrApers</span>
+        </div>
+        <div class="button-container">
+            <a href="index.html">
+            <button>
+                <img src="public/rarrow.svg" alt="Wave Icon">
+                Go Back
+            </button>
+        </a>
+        </div>
+    </header>
+    <section class="profile">
+        <img src="public/rarrow2.svg" alt="go back" class="go-back">
+        <h4><a href="index.html" class="dont">Go Back</a></h4>
+    </section>
+    <main>
+        <h1>Funding me is a <span>Mistake</span> !</h1>
+        <p>But from mistakes we learn!</p>
+        <form class="contact-form">
+            <div class="input-container">
+                <input type="text" id="first-name" name="first-name" required placeholder=" ">
+                <label for="first-name">Full Name</label>
+            </div>
+            <div class="input-container">
+                <input type="text" id="last-name" name="last-name" required placeholder=" ">
+                <label for="last-name">Email Address</label>
+            </div>
+            <div class="input-container">
+                <input type="email" id="email-address" name="email-address" required placeholder=" ">
+                <label for="email-address">Amount ($)</label>
+            </div>
+            <div class="input-container">
+                <select id="payment-type" name="payment-type" required>
+                    <option value="" disabled selected hidden>Select Payment Type</option>
+                    <option value="applepay">Apple Pay</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="mastercard">Mastercard</option>
+                    <option value="googlepay">Google Pay</option>
+                </select>
+                <label for="payment-type">Payment Type</label>
+                <div class="icon-container">
+                    <img src="public/applepay.svg" alt="Apple Pay" class="payment-icon" data-payment="applepay">
+                    <img src="public/paypal.svg" alt="PayPal" class="payment-icon" data-payment="paypal">
+                    <img src="public/mastercard.svg" alt="Mastercard" class="payment-icon" data-payment="mastercard">
+                    <img src="public/googlepay.svg" alt="Google Pay" class="payment-icon" data-payment="googlepay">
+                </div>
+            </div>
+            <h3>Your funding is highly appreciated!</h3>
+            <img src="public/arrow2.svg" alt="Arrow Icon" class="small-arrow">
+            <button type="submit" class="submit-button">Proceed</button>
+        </form>
+        
+    </main>
+    <div class="about-content">
+    <h2><strong>You May<span class="highlight"> Ask</span> Yourself</strong></h2>
+    <div class="dropdown">
+        <button class="dropdown-btn">
+            <span class="dropdown-number"><strong>1</strong></span>
+            <strong>Will I ever see my money back?</strong>
+            <img src="public/down.svg" alt="Down Icon" class="dropdown-icon">
+        </button>
+        <div class="dropdown-content">
+            <p><strong>Placeholder text for item 1.</strong></p>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropdown-btn">
+            <span class="dropdown-number"><strong>2</strong></span>
+            <strong>Can I track my money?</strong>
+            <img src="public/down.svg" alt="Down Icon" class="dropdown-icon">
+        </button>
+        <div class="dropdown-content">
+            <p><strong>Placeholder text for item 2.</strong></p>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropdown-btn">
+            <span class="dropdown-number"><strong>3</strong></span>
+            <strong>Why would I give any money?</strong>
+            <img src="public/down.svg" alt="Down Icon" class="dropdown-icon">
+        </button>
+        <div class="dropdown-content">
+            <p><strong>Placeholder text for item 3.</strong></p>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropdown-btn">
+            <span class="dropdown-number"><strong>4</strong></span>
+            <strong>Can I help in another way?</strong>
+            <img src="public/down.svg" alt="Down Icon" class="dropdown-icon">
+        </button>
+        <div class="dropdown-content">
+            <p><strong>Placeholder text for item 4</strong></p>
+        </div>
+    </div>
+    </div>
+    <footer class="footer">
+        <hr class="footer-divider">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="public/logo.png" alt="Logo">
+                <span class="footer-logo-text"><strong>MrApers</strong></span>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="footer-link"><strong>My Story</strong></a>
+                <a href="#" class="footer-link"><strong>Privacy Policy</strong></a>
+                <a href="tel:+123456789" class="footer-link"><strong>Phone</strong></a>
+                <a href="mailto:example@example.com" class="footer-link"><strong>Email</strong></a>
+                <a href="https://www.linkedin.com" class="footer-link" target="_blank"><strong>LinkedIn</strong></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('payment-type').addEventListener('change', function () {
+            const selectedValue = this.value;
+            const icons = document.querySelectorAll('.payment-icon');
+    
+            icons.forEach(icon => {
+                if (icon.dataset.payment === selectedValue) {
+                    icon.classList.add('active');
+                } else {
+                    icon.classList.remove('active');
+                }
+            });
+        });
+        document.querySelectorAll('.dropdown-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const dropdownContent = button.nextElementSibling;
+
+        button.classList.toggle('active');
+
+        if (button.classList.contains('active')) {
+            dropdownContent.style.display = 'block';
+            dropdownContent.style.maxHeight = dropdownContent.scrollHeight + 'px';
+        } else {
+            dropdownContent.style.maxHeight = '0';
+            setTimeout(() => {
+                dropdownContent.style.display = 'none';
+            }, 300); // Match the duration of the slideDown animation
+        }
+    });
+});
+    </script>
+    
+</body>
+</html>

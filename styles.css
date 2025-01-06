@@ -866,6 +866,11 @@ display: none;
     transform: scaleX(-1) rotate(160deg);
 }
 
+.payment {
+    text-decoration: none;
+    color: inherit;
+}
+
 .fund-learn-button {
     background-color: #823DC1;
     color: white;
