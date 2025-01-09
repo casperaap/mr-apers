@@ -5,13 +5,9 @@ document.querySelectorAll('.dropdown-btn').forEach(button => {
         button.classList.toggle('active');
 
         if (button.classList.contains('active')) {
-            dropdownContent.style.display = 'block';
-            dropdownContent.style.maxHeight = dropdownContent.scrollHeight + 'px';
+            dropdownContent.style.maxHeight = dropdownContent.scrollHeight + 'px'; // Expand
         } else {
-            dropdownContent.style.maxHeight = '0';
-            setTimeout(() => {
-                dropdownContent.style.display = 'none';
-            }, 300); // Match the duration of the slideDown animation
+            dropdownContent.style.maxHeight = '0'; // Collapse
         }
     });
 });

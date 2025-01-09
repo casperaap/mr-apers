@@ -34,7 +34,7 @@
         <h4><a href="index.html" class="dont">Go Back</a></h4>
     </section>
     <main>
-        <h1>Funding me is a <span>Mistake</span> !</h1>
+        <h1>Funding me is a <span>Mistake</span>!</h1>
         <p>But from mistakes we learn!</p>
         <form class="contact-form">
             <div class="input-container">
@@ -72,6 +72,7 @@
         
     </main>
     <div class="about-content">
+        <div class="gradient-top"></div>
     <h2><strong>You May<span class="highlight"> Ask</span> Yourself</strong></h2>
     <div class="dropdown">
         <button class="dropdown-btn">
@@ -80,7 +81,7 @@
             <img src="public/down.svg" alt="Down Icon" class="dropdown-icon">
         </button>
         <div class="dropdown-content">
-            <p><strong>Placeholder text for item 1.</strong></p>
+            <p>Details about this question go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
     </div>
     <div class="dropdown">
@@ -90,7 +91,7 @@
             <img src="public/down.svg" alt="Down Icon" class="dropdown-icon">
         </button>
         <div class="dropdown-content">
-            <p><strong>Placeholder text for item 2.</strong></p>
+            <p>Details about tracking your money go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
     </div>
     <div class="dropdown">
@@ -113,6 +114,7 @@
             <p><strong>Placeholder text for item 4</strong></p>
         </div>
     </div>
+    <div class="gradient-bottom"></div>
     </div>
     <footer class="footer">
         <hr class="footer-divider">
@@ -128,6 +130,9 @@
                 <a href="mailto:example@example.com" class="footer-link"><strong>Email</strong></a>
                 <a href="https://www.linkedin.com" class="footer-link" target="_blank"><strong>LinkedIn</strong></a>
             </div>
+            <p class="footer-description">
+                This website was created for demo purposes only to showcase Adobe XD. Site content by Dani Beaumont, with images by Traci L. Clever Photography and site design by Dani Beaumont and QooQee.com. All rights reserved.
+            </p>
         </div>
     </footer>
     <script>
@@ -143,23 +148,28 @@
                 }
             });
         });
-        document.querySelectorAll('.dropdown-btn').forEach(button => {
-    button.addEventListener('click', () => {
-        const dropdownContent = button.nextElementSibling;
+        document.addEventListener("DOMContentLoaded", () => {
+    const dropdownButtons = document.querySelectorAll(".dropdown-btn");
 
-        button.classList.toggle('active');
+    dropdownButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const dropdown = button.closest(".dropdown"); // Get the parent .dropdown container
+            const dropdownContent = dropdown.querySelector(".dropdown-content");
 
-        if (button.classList.contains('active')) {
-            dropdownContent.style.display = 'block';
-            dropdownContent.style.maxHeight = dropdownContent.scrollHeight + 'px';
-        } else {
-            dropdownContent.style.maxHeight = '0';
-            setTimeout(() => {
-                dropdownContent.style.display = 'none';
-            }, 300); // Match the duration of the slideDown animation
-        }
+            // Toggle 'open' class on dropdown-content
+            dropdownContent.classList.toggle("open");
+
+            // Toggle 'active' class on the button for icon rotation
+            button.classList.toggle("active");
+
+            // Adjust the parent dropdown height if needed
+            dropdown.style.height = dropdownContent.classList.contains("open")
+                ? `${dropdown.scrollHeight}px`
+                : '';
+        });
     });
 });
+
     </script>
     
 </body>

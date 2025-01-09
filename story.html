@@ -37,6 +37,7 @@
     </main>
 
     <section class="projects-section">
+        <div class="gradient-top"></div>
         <h2>My <span>Projects</span></h2>
         <div class="projects-container">
             <!-- 8 cards -->
@@ -45,7 +46,7 @@
                 <div class="card-footer">
                     <span class="project-number"><strong>Project #1</strong></span>
                     <button class="down-arrow">
-                        <img src="public/down.svg" alt="Down Arrow">
+                        <img src="public/down.svg" alt="Down Arrow"  class="dropdown-icon">
                     </button>
                 </div>
                 <div class="card-details">
@@ -57,7 +58,7 @@
                 <div class="card-footer">
                     <span class="project-number"><strong>Project #2</strong></span>
                     <button class="down-arrow">
-                        <img src="public/down.svg" alt="Down Arrow">
+                        <img src="public/down.svg" alt="Down Arrow"  class="dropdown-icon">
                     </button>
                 </div>
                 <div class="card-details">
@@ -69,7 +70,7 @@
                 <div class="card-footer">
                     <span class="project-number"><strong>Project #3</strong></span>
                     <button class="down-arrow">
-                        <img src="public/down.svg" alt="Down Arrow">
+                        <img src="public/down.svg" alt="Down Arrow"  class="dropdown-icon">
                     </button>
                 </div>
                 <div class="card-details">
@@ -81,7 +82,7 @@
                 <div class="card-footer">
                     <span class="project-number"><strong>Project #4</strong></span>
                     <button class="down-arrow">
-                        <img src="public/down.svg" alt="Down Arrow">
+                        <img src="public/down.svg" alt="Down Arrow"  class="dropdown-icon">
                     </button>
                 </div>
                 <div class="card-details">
@@ -112,6 +113,7 @@
                 <button type="submit" class="cta-button" style="background-color: #823DC1;"><strong>Join My Newsletter</strong></button>
             </form>
         </div>
+        <div class="gradient-bottom"></div>
     </section>
     <footer class="footer">
         <hr class="footer-divider">
@@ -127,26 +129,34 @@
                 <a href="mailto:example@example.com" class="footer-link"><strong>Email</strong></a>
                 <a href="https://www.linkedin.com" class="footer-link" target="_blank"><strong>LinkedIn</strong></a>
             </div>
+            <p class="footer-description">
+                This website was created for demo purposes only to showcase Adobe XD. Site content by Dani Beaumont, with images by Traci L. Clever Photography and site design by Dani Beaumont and QooQee.com. All rights reserved.
+            </p>
         </div>
     </footer>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const downArrowButtons = document.querySelectorAll(".down-arrow");
-    
-            downArrowButtons.forEach((button) => {
-                button.addEventListener("click", (event) => {
-                    const card = event.target.closest(".card"); // Get the parent card
-                    const details = card.querySelector(".card-details"); // Find the details section
-    
-                    // Toggle the open class to expand/collapse the details
-                    if (details.classList.contains("open")) {
-                        details.classList.remove("open");
-                    } else {
-                        details.classList.add("open");
-                    }
-                });
-            });
+document.addEventListener("DOMContentLoaded", () => {
+    const downArrowButtons = document.querySelectorAll(".down-arrow");
+
+    downArrowButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            const card = event.target.closest(".card"); // Get the parent card
+            const details = card.querySelector(".card-details"); // Find the details section
+
+            // Toggle the open class to expand/collapse the details
+            if (details.classList.contains("open")) {
+                details.classList.remove("open");
+                button.classList.remove("active"); // Remove active class from button
+                details.style.maxHeight = '0'; // Collapse
+            } else {
+                details.classList.add("open");
+                button.classList.add("active"); // Add active class to button
+                details.style.maxHeight = details.scrollHeight + 'px'; // Expand
+            }
         });
+    });
+});
+
     </script>
 
 </body>
