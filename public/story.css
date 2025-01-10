@@ -1,9 +1,8 @@
 body {
-    background: #000;
+    background: #0E0F07;
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
 
 header {
     display: flex;
@@ -11,12 +10,12 @@ header {
     align-items: center;
     padding: 10px 20px;
     background-color: #171717;
-    position: fixed; /* Make the header fixed */
-    width: 100%; /* Ensure the header spans the full width */
-    top: 0; /* Position it at the top */
-    z-index: 1000; /* Ensure it stays above other elements */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    max-width: 100%; /* Ensure the header fits the screen */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 .logo-container {
@@ -26,59 +25,439 @@ header {
 
 .logo-container img {
     height: 40px;
-    margin-right: 10px;
 }
 
 .logo-container span {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #fff; /* Changed to white */
+    color: #fff;
 }
 
 .button-container button {
+    text-decoration: none;
     display: flex;
     align-items: center;
-    background-color: transparent; /* Make the button empty inside */
-    color: #ffffff; /* Text color */
-    border: 2px solid #823DC1; /* Border color */
-    padding: 5px 20px; /* Reduced height and increased width */
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #823DC1;
+    padding: 5px 20px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
 }
 
+.button-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .button-container button img {
-    margin-right: 3px; /* Adjusted margin */
-    height: 10px; /* Reduced height */
-    width: 20px; /* Increased width */
-    transform: scaleX(-1); /* Flip horizontally */
+    margin-right: 3px;
+    height: 10px;
+    width: 20px;
+    transform: scaleX(-1);
 }
 
 .button-container button:hover {
     background-color: #823DC1;
-    color: #fff; /* Change text color on hover */
+    color: #fff;
 }
-
 .profile {
     position: absolute;
-    top: 100px;
-    left: 100px;
+    top: 80px;
+    left: 20px;
     display: flex;
     align-items: center;
-    gap: 5px; /* Space between arrow and text */
+    gap: 5px;
     color: grey;
-    font-size: 22px; /* Small text size */
+    font-size: 19px;
+}
+.dont {
+    color: inherit;
+    text-decoration: none;
 }
 
 .profile img {
     color: grey;
-    transform: scale(-1);
-    height: 30px; /* Small icon size */
+    height: 12px;
 }
 
+
 .profile h4 {
+    text-decoration: none !important;
     margin: 0;
-    font-size: inherit;
+    font-size: 12px;
     font-weight: normal;
     color: inherit;
+}
+
+.gradient-top {
+    position: absolute;
+    top: 1220px;
+    left: 0;
+    width: 100%;
+    height: 150px; /* Adjust height as needed */
+    background: url('assets/gradient.png') no-repeat center;
+    background-size: cover;
+    transform: scaleY(-1); /* Flip vertically */
+    z-index: 1; /* Place it behind other content */
+}
+
+.gradient-bottom {
+    position: absolute;
+    top: 3320px;
+    left: 0;
+    width: 100%;
+    height: 150px; /* Adjust height as needed */
+    background: url('assets/gradient.png') no-repeat center;
+    background-size: cover;
+    z-index: 0; /* Place it behind other content */
+}
+
+
+main {
+    background-color: #000000;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+h1 {
+    color: white;
+    font-size: 26px;
+}
+
+h1 span {
+    color: #823DC1;
+}
+
+p {
+    color: #C4C4C4;
+    text-align: left;
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+
+.centered-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.stretched-image {
+    display: block;
+    width: 100%;
+    transform: rotate(180deg);
+    margin-top: 20px;
+}
+/* Projects Section */
+.projects-section {
+    background: url('assets/background.png') no-repeat top center;
+    color: #FFFFFF;
+    padding: 20px; /* Overall padding for the section */
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 30px;
+    margin-left: 0; /* Centered text */
+}
+
+.projects-section h2 span {
+    color: #823DC1; /* Highlighted color for 'Projects' */
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Spacing between cards */
+    justify-items: center;
+    padding: 0 15px; /* Space on both sides of the screen */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.card {
+    background-color: #171717; /* Darker gray for cards */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    border: 2px solid #823DC1; /* Purple border */
+    overflow: hidden;
+    padding: 35px;
+    padding-bottom: 10px;
+    min-width: 230px;
+    width: 80%;
+    max-width: 300px; /* Square cards */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-image {
+    width: 100%;
+    height: 150px; /* Placeholder image height */
+    border-radius: 4px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.529);
+    background-color: #444; /* Fallback for no image */
+}
+
+.card-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #C4C4C4;
+}
+
+.project-number {
+    margin-left: -2px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.down-arrow {
+    margin-top: 16px;
+    margin-right: -08px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-icon {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+
+.down-arrow img {
+    width: 16px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Add hover effects */
+.card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease-in-out;
+}
+.card-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    color: #C4C4C4;
+    font-size: 0.9rem;
+    padding: 0 10px;
+    background-color: #171717;
+    margin-top: 10px;
+}
+.card-details.open {
+    max-height: 100px; /* Adjust based on the content */
+}
+
+.ctasection {
+    padding: 0px 20px;
+    background-size: 100%;
+    background: url('assets/background.png') no-repeat top center;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .ctasection {
+        padding: 70px 0px;
+        background-size: 1440px;
+        background-position: 90%;
+    }
+    .projects-section{
+        padding: 70px 0px;
+        background-size: 1440px;
+        background-position: 50%;
+    }
+}
+
+.cta-container {
+    margin-left: 32px;
+    margin-right: 32px;
+    max-width: 600px;
+    text-align: center;
+    background: #171717;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    border: solid 2px#5e2a8a;
+}
+.cta-container .diff {
+    color: #823DC1;
+}
+
+.cta-container h2 {
+    font-size: 1.8rem;
+    margin-top: 19px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.cta-container .cta-points {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.cta-container .cta-points li {
+    margin-left: 32px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.cta-container .cta-points img {
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+}
+
+.cta-container form {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 48px;
+}
+
+.input-container {
+    position: relative;
+    width: 80%;
+    margin: 20px 20px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 16px;
+    color: #000000;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: -100px;
+}
+
+
+.input-container label {
+    position: absolute;
+    top: 70%;
+    left: 10px;
+    font-size: 16px;
+    color: #aaa;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: 0.3s ease all;
+}
+
+.input-container input:focus + label{
+    opacity: 0;
+}
+
+.cta-button {
+    display: inline-block;
+    height: 51px;
+    width: 233px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    margin-right: 5px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #823DC1;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #4c2376;
+}
+.footer {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+    color: #ffffff;
+}
+
+.footer-divider {
+    border: none;
+    height: 2px;
+    background-color: #C4C4C4;
+    margin: 20px auto;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer-logo-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #C4C4C4;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: -18px;
+}
+
+.footer-link {
+    color: #C4C4C4;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    background-color: #823DC1;
+    color: #C4C4C4;
+}
+
+.footer-description {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #ccc;
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.5;
 }

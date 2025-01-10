@@ -17,20 +17,20 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="public/logo.png" alt="Logo">
+            <img src="assets/logo.png" alt="Logo">
             <span>MrApers</span>
         </div>
         <div class="button-container">
             <a href="index.html">
             <button>
-                <img src="public/rarrow.svg" alt="Wave Icon">
+                <img src="assets/rarrow.svg" alt="Wave Icon">
                 Go Back
             </button>
         </a>
         </div>
     </header>
     <section class="profile">
-        <img src="public/rarrow2.svg" alt="go back" class="go-back">
+        <img src="assets/rarrow2.svg" alt="go back" class="go-back">
         <h4><a href="index.html" class="dont">Go Back</a></h4>
     </section>
     <main>
@@ -61,7 +61,7 @@
                 <div id="payment-icon-container"></div>
             </div>
             <h3>Your funding is highly appreciated!</h3>
-            <img src="public/arrow2.svg" alt="Arrow Icon" class="small-arrow">
+            <img src="assets/arrow2.svg" alt="Arrow Icon" class="small-arrow">
             <button type="submit" id="submit-button" class="submit-button">Proceed</button>
         </form>
         <div id="paypal-button-container"></div>
@@ -74,7 +74,7 @@
         <button class="dropdown-btn">
             <span class="dropdown-number"><strong>1</strong></span>
             <strong>Will I ever see my money back?</strong>
-            <img src="public/down.svg" alt="Down Icon" class="dropdown-icon">
+            <img src="assets/down.svg" alt="Down Icon" class="dropdown-icon">
         </button>
         <div class="dropdown-content">
             <p>Details about this question go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -84,7 +84,7 @@
         <button class="dropdown-btn">
             <span class="dropdown-number"><strong>2</strong></span>
             <strong>Can I track my money?</strong>
-            <img src="public/down.svg" alt="Down Icon" class="dropdown-icon">
+            <img src="assets/down.svg" alt="Down Icon" class="dropdown-icon">
         </button>
         <div class="dropdown-content">
             <p>Details about tracking your money go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -94,7 +94,7 @@
         <button class="dropdown-btn">
             <span class="dropdown-number"><strong>3</strong></span>
             <strong>Why would I give any money?</strong>
-            <img src="public/down.svg" alt="Down Icon" class="dropdown-icon">
+            <img src="assets/down.svg" alt="Down Icon" class="dropdown-icon">
         </button>
         <div class="dropdown-content">
             <p><strong>Placeholder text for item 3.</strong></p>
@@ -104,7 +104,7 @@
         <button class="dropdown-btn">
             <span class="dropdown-number"><strong>4</strong></span>
             <strong>Can I help in another way?</strong>
-            <img src="public/down.svg" alt="Down Icon" class="dropdown-icon">
+            <img src="assets/down.svg" alt="Down Icon" class="dropdown-icon">
         </button>
         <div class="dropdown-content">
             <p><strong>Placeholder text for item 4</strong></p>
@@ -116,7 +116,7 @@
         <hr class="footer-divider">
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="public/logo.png" alt="Logo">
+                <img src="assets/logo.png" alt="Logo">
                 <span class="footer-logo-text"><strong>MrApers</strong></span>
             </div>
             <div class="footer-links">
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         // Create and display the new icon
         const iconImage = document.createElement('img');
-        iconImage.src = `public/${iconName}`;
+        iconImage.src = `assets/${iconName}`;
         iconImage.alt = selectedValue;
         iconImage.classList.add('payment-icon'); // Optionally add a class for styling
         paymentIconContainer.appendChild(iconImage);

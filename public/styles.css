@@ -66,7 +66,7 @@ header {
 .hero {
     position: relative;
     height: 100vh;
-    background: url('public/hero.png') no-repeat center center/cover;
+    background: url('assets/hero.png') no-repeat center center/cover;
     margin-top: 60px; /* Adjust for the fixed header height */
     min-height: 740px; /* Set a minimum height to prevent overlap */
 }
@@ -553,7 +553,7 @@ margin-bottom: 32px;
 
 .pattern-section {
     position: relative;
-    background: url('public/background.png') no-repeat center center;
+    background: url('assets/background.png') no-repeat center center;
     background-size: 100%; /* Ensure the background image covers the entire section */
     padding: 130px 13.74100px;
     text-align: center;
@@ -740,7 +740,7 @@ margin-bottom: 32px;
     left: 0;
     width: 100%;
     height: 150px; /* Adjust height as needed */
-    background: url('public/gradient.png') no-repeat center;
+    background: url('assets/gradient.png') no-repeat center;
     background-size: cover;
     transform: scaleY(-1); /* Flip vertically */
     z-index: 1; /* Place it behind other content */
@@ -751,7 +751,7 @@ margin-bottom: 32px;
     left: 0;
     width: 100%;
     height: 150px; /* Adjust height as needed */
-    background: url('public/gradient.png') no-repeat center;
+    background: url('assets/gradient.png') no-repeat center;
     background-size: cover;
     transform: scaleY(-1); /* Flip vertically */
     z-index: 1; /* Place it behind other content */
@@ -764,7 +764,7 @@ margin-bottom: 32px;
     left: 0;
     width: 100%;
     height: 150px; /* Adjust height as needed */
-    background: url('public/gradient.png') no-repeat center;
+    background: url('assets/gradient.png') no-repeat center;
     background-size: cover;
     z-index: 1; /* Place it behind other content */
 }
@@ -948,7 +948,7 @@ display: none;
 }
 .ctasection {
     padding: 0px 20px;
-    background: url('public/background.png') no-repeat top center;
+    background: url('assets/background.png') no-repeat top center;
     background-size: 100%;
     display: flex;
     justify-content: center;
