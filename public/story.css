@@ -230,7 +230,6 @@ p {
 }
 
 .dropdown-icon {
-    transform: rotate(0deg);
     transition: transform 0.3s ease;
 }
 
@@ -241,6 +240,9 @@ p {
     transition: transform 0.3s ease;
 }
 
+.dropdown-icon.rotate {
+    transform: rotate(180deg); /* Rotate the icon 180 degrees */
+}
 /* Add hover effects */
 .card:hover {
     transform: translateY(-5px);
@@ -269,6 +271,13 @@ p {
     justify-content: center;
     align-items: center;
 }
+input {
+    color: grey; /* Default grey for initial and blur states */
+}
+
+input:focus {
+    color: black; /* Changes to black when focused */
+}
 
 @media (max-width: 768px) {
     .ctasection {
@@ -279,7 +288,7 @@ p {
     .projects-section{
         padding: 70px 0px;
         background-size: 1440px;
-        background-position: 50%;
+        background-position: 90%;
     }
 }
 
