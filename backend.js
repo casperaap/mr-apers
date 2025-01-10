@@ -108,7 +108,7 @@ app.post('/submit-feedback', (req, res) => {
 
     const mailOptions = {
         from: email,
-        to: 'epiclegend1298@gmail.com',
+        to: 'casper.apers@gmail.com',
         subject: `Feedback from ${email}`,
         text: message,
     };
