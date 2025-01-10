@@ -169,7 +169,7 @@ document.getElementById('payment-form').addEventListener('submit', async functio
         }
 
         // Make sure the URL matches the backend's correct endpoint
-        const response = await fetch('http://localhost:3000/create-checkout-session', { 
+        const response = await fetch('https://mr-apers.koyeb.app/create-checkout-session', { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

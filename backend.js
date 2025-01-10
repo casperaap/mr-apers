@@ -71,8 +71,8 @@ app.post('/create-checkout-session', async (req, res) => {
                 },
             ],
             mode: 'payment',
-            success_url: 'http://localhost:30/index.html',
-            cancel_url: 'http://localhost:30/index.html',
+            success_url: 'https://mr-apers.koyeb.app/index.html',
+            cancel_url: 'https://mr-apers.koyeb.app/index.html',
             customer_email: email,
         });
 
@@ -145,7 +145,7 @@ app.post('/send-email', (req, res) => {
 
     const mailOptions = {
         from: emailAddress, // Sender's email address
-        to: 'epiclegend1298@gmail.com', // Recipient's email address
+        to: 'casper.apers@gmail.com', // Recipient's email address
         subject: `New message from ${firstName} ${lastName}`,
         text: `You have received a new message from your website contact form:\n\n
 First Name: ${firstName}\n

@@ -16,7 +16,7 @@ function submitNewsletter() {
     const firstName = document.getElementById('first-name').value;
     const email = document.getElementById('email').value;
 
-    fetch('http://localhost:3000/subscribe', {
+    fetch('https://mr-apers.koyeb.app/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ firstName, email }),
@@ -42,7 +42,7 @@ async function submitNewsletter() {
     }
 
     try {
-        const response = await fetch('http://localhost:3000/subscribe', {
+        const response = await fetch('https://mr-apers.koyeb.app/subscribe', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ document.querySelector('.newsletter-container form').addEventListener('submit', 
         message: message,
     };
 
-    fetch('http://localhost:3000/submit-feedback', {
+    fetch('https://mr-apers.koyeb.app/submit-feedback', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
