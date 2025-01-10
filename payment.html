@@ -36,40 +36,36 @@
     <main>
         <h1>Funding me is a <span>Mistake</span>!</h1>
         <p>But from mistakes we learn!</p>
-        <form class="contact-form">
+        <form id="payment-form" class="contact-form">
             <div class="input-container">
                 <input type="text" id="first-name" name="first-name" required placeholder=" ">
                 <label for="first-name">Full Name</label>
             </div>
             <div class="input-container">
-                <input type="text" id="last-name" name="last-name" required placeholder=" ">
-                <label for="last-name">Email Address</label>
+                <input type="email" id="email-address" name="email-address" required placeholder=" ">
+                <label for="email-address">Email Address</label>
             </div>
             <div class="input-container">
-                <input type="email" id="email-address" name="email-address" required placeholder=" ">
-                <label for="email-address">Amount ($)</label>
+                <input type="number" id="amount" name="amount" required placeholder=" " min="1">
+                <label for="amount">Amount ($)</label>
             </div>
             <div class="input-container">
                 <select id="payment-type" name="payment-type" required>
                     <option value="" disabled selected hidden>Select Payment Type</option>
-                    <option value="applepay">Apple Pay</option>
-                    <option value="paypal">PayPal</option>
-                    <option value="mastercard">Mastercard</option>
-                    <option value="googlepay">Google Pay</option>
+                    <option value="applepay" data-icon="applepay.svg">Apple Pay</option>
+                    <option value="paypal" data-icon="paypal.svg">PayPal</option>
+                    <option value="mastercard" data-icon="mastercard.svg">Mastercard</option>
+                    <option value="googlepay" data-icon="googlepay.svg">Google Pay</option>
                 </select>
                 <label for="payment-type">Payment Type</label>
-                <div class="icon-container">
-                    <img src="public/applepay.svg" alt="Apple Pay" class="payment-icon" data-payment="applepay">
-                    <img src="public/paypal.svg" alt="PayPal" class="payment-icon" data-payment="paypal">
-                    <img src="public/mastercard.svg" alt="Mastercard" class="payment-icon" data-payment="mastercard">
-                    <img src="public/googlepay.svg" alt="Google Pay" class="payment-icon" data-payment="googlepay">
-                </div>
+                <div id="payment-icon-container"></div>
             </div>
             <h3>Your funding is highly appreciated!</h3>
             <img src="public/arrow2.svg" alt="Arrow Icon" class="small-arrow">
-            <button type="submit" class="submit-button">Proceed</button>
+            <button type="submit" id="submit-button" class="submit-button">Proceed</button>
         </form>
-        
+        <div id="paypal-button-container"></div>
+
     </main>
     <div class="about-content">
         <div class="gradient-top"></div>
@@ -135,19 +131,127 @@
             </p>
         </div>
     </footer>
+    <script src="https://www.paypal.com/sdk/js?client-id=Aeqvpd7aXYzFDHrPPBOGFo1mBIhk7gvaPin7d95qEGataGZyLgH8kKrjEiH-8sW7OzSo2A1jFgeL8BJ3&components=buttons"></script>
+    <script src="https://js.stripe.com/v3/"></script>
     <script>
-        document.getElementById('payment-type').addEventListener('change', function () {
-            const selectedValue = this.value;
-            const icons = document.querySelectorAll('.payment-icon');
-    
-            icons.forEach(icon => {
-                if (icon.dataset.payment === selectedValue) {
-                    icon.classList.add('active');
-                } else {
-                    icon.classList.remove('active');
-                }
-            });
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('payment-type').addEventListener('change', function () {
+        const selectedValue = this.value;
+        const paymentIconContainer = document.getElementById('payment-icon-container');
+        
+        // Clear any previous icons
+        paymentIconContainer.innerHTML = '';
+        
+        // Get the icon from the selected option
+        const selectedOption = this.options[this.selectedIndex];
+        const iconName = selectedOption.getAttribute('data-icon');
+        
+        // Create and display the new icon
+        const iconImage = document.createElement('img');
+        iconImage.src = `public/${iconName}`;
+        iconImage.alt = selectedValue;
+        iconImage.classList.add('payment-icon'); // Optionally add a class for styling
+        paymentIconContainer.appendChild(iconImage);
+    });
+});
+
+
+document.getElementById('payment-form').addEventListener('submit', async function (e) {
+    e.preventDefault(); // Prevent form refresh
+
+    try {
+        const amount = document.getElementById('amount').value;
+
+        if (amount <= 0) {
+            alert('Please enter a valid amount.');
+            return;
+        }
+
+        // Make sure the URL matches the backend's correct endpoint
+        const response = await fetch('http://localhost:3000/create-checkout-session', { 
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                amount: amount * 100, // Convert dollars to cents
+                name: document.getElementById('first-name').value,
+                email: document.getElementById('email-address').value,
+            }),
         });
+
+        if (!response.ok) {
+            throw new Error('Failed to create checkout session');
+        }
+
+        const { url } = await response.json();
+        window.location.href = url; // Redirect to the Stripe Checkout page
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Something went wrong. Please try again.');
+    }
+});
+
+document.getElementById('payment-type').addEventListener('change', function () {
+    const selectedValue = this.value;
+    const icons = document.querySelectorAll('.payment-icon');
+
+    icons.forEach(icon => {
+        if (icon.dataset.payment === selectedValue) {
+            icon.classList.add('active');
+        } else {
+            icon.classList.remove('active');
+        }
+    });
+
+    // Show PayPal button when PayPal is selected
+    if (selectedValue === 'paypal') {
+        showPayPalButton();
+    } else {
+        hidePayPalButton();
+    }
+});
+
+function showPayPalButton() {
+    const paypalContainer = document.getElementById('paypal-button-container');
+    if (!paypalContainer) {
+        const newContainer = document.createElement('div');
+        newContainer.id = 'paypal-button-container';
+        document.getElementById('payment-form').appendChild(newContainer);
+    }
+
+    // Render the PayPal button
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: document.getElementById('amount').value
+                    }
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                alert('Transaction completed by ' + details.payer.name.given_name);
+                // Handle success here
+            });
+        },
+        onError: function(err) {
+            console.error(err);
+            alert('Something went wrong with PayPal. Please try again.');
+        }
+    }).render('#paypal-button-container');
+}
+
+function hidePayPalButton() {
+    const paypalContainer = document.getElementById('paypal-button-container');
+    if (paypalContainer) {
+        paypalContainer.innerHTML = ''; // Remove PayPal button
+    }
+}
+
         document.addEventListener("DOMContentLoaded", () => {
     const dropdownButtons = document.querySelectorAll(".dropdown-btn");
 

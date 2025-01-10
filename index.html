@@ -28,17 +28,17 @@
             <h1><strong>I don't know <br>what I'm doing, <br>but <span class="highlight">fuck it</span>.</strong></h1>
             <div class="card">
                 <h4><strong>Join the newsletter of a 20 year old that earns 0$ per month...</strong></h4>
-                <form>
+                <form id="newsletter-form">
                     <div class="input-container">
-                        <input type="text" id="first-name" name="first-name" placeholder=" ">
+                        <input type="text" id="first-name" name="first-name" placeholder=" " required>
                         <label for="first-name">First name</label>
                     </div>
                     <div class="input-container">
-                        <input type="email" id="email" name="email" placeholder=" ">
+                        <input type="email" id="email" name="email" placeholder=" " required>
                         <label for="email">Email address</label>
                     </div>
                     <div class="newsletter-container1">
-                        <button type="submit" class="newsletter-button">
+                        <button class="newsletter-button" type="button" onclick="submitNewsletter()">
                             <strong>Join my newsletter</strong>
                         </button>
                         <img src="public/arrow.svg" alt="Arrow Icon" class="button-arrow">
@@ -107,19 +107,25 @@
         <div class="gradient-top"></div>
         <div class="pattern-content">
             <div class="left-side">
-                <h2 class="pattern-heading"><strong>Are You <span class="highlight">Succesful?</span></strong></h2>
-                <p class="pattern-subheading"><strong>Proven systems, psychology-backed strategies, practical frameworks that help you achieve your biggest goals, and more are waiting. Better join!</strong></p>
+                <h2 class="pattern-heading"><strong>Are You <span class="highlight">Successful?</span></strong></h2>
+                <p class="pattern-subheading">
+                    <strong>Proven systems, psychology-backed strategies, practical frameworks that help you achieve your biggest goals, and more are waiting. Better join!</strong>
+                </p>
                 <div class="rectangle-container"></div>
                 <div class="rectangle-container"></div>
                 <div class="rectangle-container"></div>
             </div>
             <div class="newsletter-container">
-                <h4 class="newsletter-heading"><strong>tell me your secret...<br> Help me out...<br>Give me feedback...</strong></h4>
-                <h2 class="pattern-heading2"><strong>Are You <span class="highlight">Succesful?</span></strong></h2>
-                <p class="additional-text"><strong>tell me your secret... <br> Help me out... <br> Give me feedback...</strong></p>
+                <h4 class="newsletter-heading">
+                    <strong>Tell me your secret...<br> Help me out...<br>Give me feedback...</strong>
+                </h4>
+                <h2 class="pattern-heading2"><strong>Are You <span class="highlight">Successful?</span></strong></h2>
+                <p class="additional-text">
+                    <strong>Tell me your secret...<br> Help me out...<br>Give me feedback...</strong>
+                </p>
                 <form>
                     <div class="input-container2">
-                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <input type="email" id="emails" name="emails" placeholder=" " required>
                         <label for="email">Email address</label>
                     </div>
                     <div class="input-container2">
@@ -128,10 +134,12 @@
                     </div>
                     <button type="submit" class="feedback-button"><strong>Send Feedback</strong></button>
                 </form>
+                
             </div>
         </div>
         <div class="gradient-bottom"></div>
     </section>
+    
 
     <section class="fund-section">
         <h2><strong>Learn From a Mistake <br><span class="highlight">and Fund me below </span> ↓</strong></h2>
@@ -175,14 +183,16 @@
             </ul>
             <form>
                 <div class="input-container">
+                    <input type="text" id="cta-first-name" name="first-name" required>
                     <label for="cta-first-name">First Name</label>
-                    <input type="text" id="cta-first-name" name="first-name" placeholder=" " required>
                 </div>
                 <div class="input-container">
+                    <input type="email" id="cta-email" name="email" required>
                     <label for="cta-email">Email Address</label>
-                    <input type="email" id="cta-email" name="email" placeholder=" " required>
-                </div>
-                <button type="submit" class="cta-button" style="background-color: #823DC1;"><strong>Join My Newsletter</strong></button>
+                </div>                
+                <button class="cta-button" type="button" onclick="submitNewsletter()" style="background-color: #823DC1;">
+                    <strong>Join My Newsletter</strong>
+                </button>
             </form>
         </div>
     </section>

@@ -1049,11 +1049,11 @@ display: none;
 }
 
 .input-container input:focus + label,
-.input-container input:not(:placeholder-shown) + label {
-    top: -10px;
-    left: 10px;
-    font-size: 14px;
-    color: #823DC1;
+.input-container select:focus + label,
+.input-container select:not([value=""]) + label {
+    top: -8px; /* Move label up when focused or typed into */
+    font-size: 12px; /* Make label smaller */
+    opacity: 0;
 }
 
 .cta-button {

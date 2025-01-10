@@ -103,14 +103,14 @@
             </ul>
             <form>
                 <div class="input-container">
-                    <label for="cta-first-name">First Name</label>
-                    <input type="text" id="cta-first-name" name="first-name" placeholder=" " required>
+                    <label for="cta-first-name"></label>
+                    <input type="text" id="cta-first-name" name="first-name" onfocus="this.value=''" value="First Name" required>
                 </div>
                 <div class="input-container">
-                    <label for="cta-email">Email Address</label>
-                    <input type="email" id="cta-email" name="email" placeholder=" " required>
+                    <label for="cta-email"></label>
+                    <input type="email" id="cta-email" name="email" placeholder=" " onfocus="this.value=''" value="Email" required>
                 </div>
-                <button type="submit" class="cta-button" style="background-color: #823DC1;"><strong>Join My Newsletter</strong></button>
+                <button type="button" class="cta-button" onclick="submitNewsletter()" style="background-color: #823DC1;"><strong>Join My Newsletter</strong></button>
             </form>
         </div>
         <div class="gradient-bottom"></div>
@@ -156,6 +156,36 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+async function submitNewsletter() {
+            const firstName = document.getElementById('cta-first-name').value;
+            const email = document.getElementById('cta-email').value;
+
+            if (!email) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            try {
+                const response = await fetch('http://localhost:3000/subscribe', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ firstName, email }),
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    alert('Thank you for subscribing! ' + result.message);
+                } else {
+                    const error = await response.json();
+                    alert('Error: ' + (error.message || 'Unable to subscribe.'));
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An unexpected error occurred. Please try again later.');
+            }
+        }
 
     </script>
 
