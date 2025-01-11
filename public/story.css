@@ -116,6 +116,7 @@ header {
 
 
 main {
+    padding-bottom: 0px !important;
     background-color: #000000;
     padding: 20px;
     margin-top: 60px;
