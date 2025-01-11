@@ -229,7 +229,7 @@ h3 {
 
 .dropdown {
     padding: 10px;
-    margin: 10px 0;
+    margin: 4px 0;
     position: relative;
     background-color: #171717;
     border: 2px solid #823DC1;
@@ -322,7 +322,7 @@ h3 {
 /* Bottom Gradient */
 .gradient-bottom {
     position: absolute;
-    top: 1210px;
+    top: 1240px;
     left: 0;
     width: 100%;
     height: 150px; /* Adjust height as needed */
@@ -331,6 +331,9 @@ h3 {
     z-index: 0; /* Place it behind other content */
 }
 
+.paypal {
+    margin-top: 10px;
+}
 
 @media (max-width: 768px) {
     .about-content {
@@ -343,7 +346,7 @@ h3 {
 .about-content h2 {
     z-index: 1;
     margin: 30px 0 20px 0; /* Combine margin-top and margin-bottom */
-    font-size: 1.9rem; /* Header-sized text */
+    font-size: 1.6rem; /* Header-sized text */
     color: #fff;
 }
 

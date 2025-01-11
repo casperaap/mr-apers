@@ -8,7 +8,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 13px 20px;
     background-color: #171717;
     position: fixed; /* Make the header fixed */
     width: 100%; /* Ensure the header spans the full width */
@@ -235,7 +235,7 @@ header {
 .newsletter-container1 .button-arrow {
     height: 25px; /* Increased height */
     width: 30px; /* Increased width */
-    transform: scaleX(-1) rotate(-35deg); /* Flip horizontally */
+    transform: scaleX(-1) rotate(-55deg); /* Flip horizontally */
     position: relative;
     top: 42px; /* Move it down slightly */
 }
@@ -361,7 +361,7 @@ margin-bottom: 32px;
 }
 
 .about-content h2 {
-    font-size: 2.3rem; /* Header-sized text */
+    font-size: 1.6rem; /* Header-sized text */
     color: #fff;
     margin-top: 20px;
     margin-bottom: 32px;
@@ -545,8 +545,7 @@ margin-bottom: 32px;
 
 @media (max-width: 480px) {
     .speech-bubble {
-        top: 50px; /* Adjust as needed */
-        right: 10px; /* Adjust as needed */
+        top: -30px; /* Adjust as needed */
         max-width: 150px; /* Adjust as needed */
     }
 }
@@ -747,7 +746,7 @@ margin-bottom: 32px;
 }
 .gradient-top-c {
     position: absolute;
-    top: 3370px;
+    top: 3330px;
     left: 0;
     width: 100%;
     height: 150px; /* Adjust height as needed */
@@ -758,7 +757,7 @@ margin-bottom: 32px;
 }
 .gradient-bottom-c {
     position: absolute;
-    top: 4080px;
+    top: 4000px;
     left: 0;
     width: 100%;
     height: 150px; /* Adjust height as needed */
@@ -820,7 +819,7 @@ display: none;
     }
 
     .pattern-section .newsletter-container .pattern-heading2 {
-        font-size: 1.9rem;
+        font-size: 1.7rem;
         font-weight: bold;
         color: #fff;
         text-align: center;
@@ -830,7 +829,7 @@ display: none;
 
     .pattern-section .newsletter-container .pattern-heading2 .highlight {
         color: #823DC1;
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .pattern-section .newsletter-container .additional-text {
@@ -848,7 +847,7 @@ display: none;
 }
 
 .fund-section h2 {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     margin-top: -30px;
     margin-bottom: 32px;
 }
@@ -924,8 +923,8 @@ display: none;
     width: 20px;
     height: 20px;
     margin-top: -20px;
-    margin-left: -300px;
-    transform: scaleX(-1) rotate(160deg);
+    margin-left: -280px;
+    transform: scaleX(-1) rotate(140deg);
 }
 
 .payment {
@@ -990,9 +989,9 @@ display: none;
 }
 
 .cta-container h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-top: 19px;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
     color: #ffffff;
 }
 
@@ -1006,7 +1005,7 @@ display: none;
     margin-left: 32px;
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-size: 14px;
     color: #ffffff;
 }
@@ -1021,7 +1020,7 @@ display: none;
     width: 100%;
     max-width: 400px;
     margin-right: 32px;
-    margin-left: 20px;
+    margin-left: 25px;
     margin-top: 48px;
 }
 
@@ -1071,7 +1070,7 @@ display: none;
     width: 233px;
     margin-top: 32px;
     margin-bottom: 32px;
-    margin-right: 30px;
+    margin-right: 57px;
     color: white;
     padding: 10px 20px;
     font-size: 1rem;
