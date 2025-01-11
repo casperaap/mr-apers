@@ -163,6 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.card');
     const gradientTop = document.querySelector('.gradient-top');
+    let openCardsCount = 0;
     
     buttons.forEach(button => {
         let isOpen = false;
@@ -171,6 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const details = button.closest('.card').querySelector('.card-details');
 
             isOpen = !isOpen;
+            openCardsCount += isOpen ? 1 : -1;
 
             // Toggle rotation on the icon
             icon.classList.toggle('rotate');
@@ -178,8 +180,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Toggle visibility of the details
             details.classList.toggle('visible');
             
-            // Simply toggle display
-            gradientTop.style.display = isOpen ? 'none' : 'block';
+            // Show gradient only when all cards are closed
+            gradientTop.style.display = openCardsCount === 0 ? 'block' : 'none';
         });
     });
 });
