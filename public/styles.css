@@ -546,7 +546,7 @@ margin-bottom: 32px;
 @media (max-width: 480px) {
     .speech-bubble {
         right: 20px;
-        top: 15px;
+        top: 35px;
         max-width: 120px;
     }
 }

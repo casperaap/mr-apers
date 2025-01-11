@@ -1,13 +1,19 @@
 document.querySelectorAll('.dropdown-btn').forEach(button => {
+    const gradientTopC = document.querySelector('.gradient-top-c');
+    let isOpen = false;
+
     button.addEventListener('click', () => {
         const dropdownContent = button.nextElementSibling;
+        isOpen = !isOpen;
 
         button.classList.toggle('active');
 
         if (button.classList.contains('active')) {
             dropdownContent.style.maxHeight = dropdownContent.scrollHeight + 'px'; // Expand
+            gradientTopC.style.display = 'none'; // Hide gradient when open
         } else {
             dropdownContent.style.maxHeight = '0'; // Collapse
+            gradientTopC.style.display = 'block'; // Show gradient when closed
         }
     });
 });

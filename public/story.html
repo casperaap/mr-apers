@@ -175,11 +175,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Toggle rotation on the icon
             icon.classList.toggle('rotate');
 
-            // Toggle visibility of the details (optional)
+            // Toggle visibility of the details
             details.classList.toggle('visible');
-            gradientTop.style.transition = 'transform 0.3s ease-out';
-            gradientTop.style.transform = `translateY(1000px)`;
-            gradientTop.style.transform = isOpen ? `translateY(1000px)` : `translateY(0) scaleY(-1)`;
+            
+            // Simply toggle display
+            gradientTop.style.display = isOpen ? 'none' : 'block';
         });
     });
 });
