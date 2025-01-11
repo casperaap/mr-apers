@@ -161,34 +161,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.down-arrow');
-
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            const icon = button.querySelector('.dropdown-icon');
-            const details = button.closest('.card').querySelector('.card-details');
-
-            // Toggle rotation on the icon
-            icon.classList.toggle('rotate');
-
-            // Toggle visibility of the details (optional)
-            details.classList.toggle('visible');
-        });
-    });
-});
-document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.card');
-
+    const gradientTop = document.querySelector('.gradient-top');
+    
     buttons.forEach(button => {
+        let isOpen = false;
         button.addEventListener('click', () => {
             const icon = button.querySelector('.dropdown-icon');
             const details = button.closest('.card').querySelector('.card-details');
+
+            isOpen = !isOpen;
 
             // Toggle rotation on the icon
             icon.classList.toggle('rotate');
 
             // Toggle visibility of the details (optional)
             details.classList.toggle('visible');
+            gradientTop.style.transition = 'transform 0.3s ease-out';
+            gradientTop.style.transform = `translateY(1000px)`;
+            gradientTop.style.transform = isOpen ? `translateY(1000px)` : `translateY(0) scaleY(-1)`;
         });
     });
 });
