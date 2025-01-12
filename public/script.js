@@ -1,3 +1,5 @@
+let openDropdownCount = 0;
+
 document.querySelectorAll('.dropdown-btn').forEach(button => {
     const gradientTopC = document.querySelector('.gradient-top-c');
     let isOpen = false;
@@ -5,6 +7,7 @@ document.querySelectorAll('.dropdown-btn').forEach(button => {
     button.addEventListener('click', () => {
         const dropdownContent = button.nextElementSibling;
         isOpen = !isOpen;
+        openDropdownCount += isOpen ? 1 : -1;
 
         button.classList.toggle('active');
 
@@ -13,7 +16,7 @@ document.querySelectorAll('.dropdown-btn').forEach(button => {
             gradientTopC.style.display = 'none'; // Hide gradient when open
         } else {
             dropdownContent.style.maxHeight = '0'; // Collapse
-            gradientTopC.style.display = 'block'; // Show gradient when closed
+            gradientTopC.style.display = openDropdownCount === 0 ? 'block' : 'none';
         }
     });
 });
