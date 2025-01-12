@@ -273,13 +273,19 @@ function hidePayPalButton() {
     }
 }
 
-        document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const dropdownButtons = document.querySelectorAll(".dropdown-btn");
+    const gradientBottom = document.querySelector(".gradient-bottom");
+    let openDropdownCount = 0;
 
     dropdownButtons.forEach((button) => {
+        let isOpen = false;
         button.addEventListener("click", () => {
-            const dropdown = button.closest(".dropdown"); // Get the parent .dropdown container
+            const dropdown = button.closest(".dropdown");
             const dropdownContent = dropdown.querySelector(".dropdown-content");
+
+            isOpen = !isOpen;
+            openDropdownCount += isOpen ? 1 : -1;
 
             // Toggle 'open' class on dropdown-content
             dropdownContent.classList.toggle("open");
@@ -291,10 +297,12 @@ function hidePayPalButton() {
             dropdown.style.height = dropdownContent.classList.contains("open")
                 ? `${dropdown.scrollHeight}px`
                 : '';
+
+            // Toggle gradient visibility
+            gradientBottom.style.display = openDropdownCount === 0 ? 'block' : 'none';
         });
     });
 });
-
     </script>
     
 </body>
