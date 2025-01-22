@@ -25,7 +25,7 @@ function submitNewsletter() {
     const firstName = document.getElementById('first-name').value;
     const email = document.getElementById('email').value;
 
-    fetch('https://mr-apers.koyeb.app/subscribe', {
+    fetch('https://gothic-myrtia-mrapers-f48b0cd7.koyeb.app/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ firstName, email }),
@@ -51,7 +51,7 @@ async function submitNewsletter() {
     }
 
     try {
-        const response = await fetch('https://mr-apers.koyeb.app/subscribe', {
+        const response = await fetch('https://gothic-myrtia-mrapers-f48b0cd7.koyeb.app/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -95,7 +95,7 @@ document.querySelector('.newsletter-container form').addEventListener('submit', 
         message: message,
     };
 
-    fetch('https://mr-apers.koyeb.app/submit-feedback', {
+    fetch('https://gothic-myrtia-mrapers-f48b0cd7.koyeb.app/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
