@@ -1160,3 +1160,6 @@ display: none;
     max-width: 600px;
     line-height: 1.5;
 }
+.dropdown-content ul {
+  color: #ffff; /* or color: white; */
+}
