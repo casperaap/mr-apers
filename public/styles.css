@@ -1184,6 +1184,3 @@ display: none;
   text-align: left;           /* overrides any inherited centering */
   margin-bottom: 0.5em;       /* a bit of spacing */
 }
-.dropdown-content {
-  padding-bottom: 1em;  /* adjust as needed */
-}
