@@ -1002,10 +1002,15 @@ display: none;
     margin: 20px 0;
 }
 
+.cta-points { 
+text-align: left
+    
+}
+
 .cta-container .cta-points li {
     margin-left: 32px;
     display: flex;
-    align-items: center;
+    align-items: left;
     margin-bottom: 30px;
     font-size: 14px;
     color: #ffffff;
