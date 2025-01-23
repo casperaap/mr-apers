@@ -1002,8 +1002,15 @@ display: none;
     margin: 20px 0;
 }
 
-.cta-points { 
-text-align: left
+.cta-points {
+  text-align: left;  /* ensures horizontal alignment is left */
+    
+}
+
+.cta-points li {
+  display: flex;
+  /* This only affects vertical alignment in a row layout: */
+  align-items: flex-start;    
     
 }
 
