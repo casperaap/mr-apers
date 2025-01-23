@@ -956,21 +956,21 @@ display: none;
     font-size: 18px;
 }
     
-/* Container styling */
+}
+
 .cta-container {
     position: relative; /* Ensure it appears above the gradient */
     z-index: 2;
     margin-left: 32px;
     margin-right: 32px;
     max-width: 600px;
-    text-align: center;         /* Only affects inline text in this container */
+    text-align: center;
     background: #171717;
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    border: solid 2px #5e2a8a;
+    border: solid 2px#5e2a8a;
 }
-
 .cta-container .diff {
     color: #823DC1;
 }
@@ -982,31 +982,39 @@ display: none;
     color: #ffffff;
 }
 
-/* Points list styling */
 .cta-container .cta-points {
     list-style: none;
-    margin: 20px 0;
     padding: 0;
-    text-align: left; /* Ensures bullet text is left-aligned */
+    margin: 20px 0;
+}
+
+.cta-points {
+  text-align: left;  /* ensures horizontal alignment is left */
+    
+}
+
+.cta-points li {
+  display: flex;
+  /* This only affects vertical alignment in a row layout: */
+  align-items: flex-start;    
+    
 }
 
 .cta-container .cta-points li {
-    display: flex;
-    align-items: flex-start;    /* Top-align text with icon (use 'center' if you want them vertically centered) */
-    margin-bottom: 30px;
     margin-left: 32px;
+    display: flex;
+    align-items: left;
+    margin-bottom: 30px;
     font-size: 14px;
     color: #ffffff;
 }
 
-.cta-container .cta-points li img {
-    display: block;            /* Removes inline-level baseline offset */
+.cta-container .cta-points img {
     margin-right: 10px;
     width: 32px;
     height: 32px;
 }
 
-/* Form styling */
 .cta-container form {
     width: 100%;
     max-width: 400px;
