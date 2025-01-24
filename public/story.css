@@ -262,13 +262,6 @@ p {
 .card-details.open {
     max-height: 100px; /* Adjust based on the content */
 
-.card-details ul {
-    padding-left: 0; /* Removes padding on the left of the list */
-    margin-left: 0; /* Adjusts margin to align with other content */
-}
-
-.card-details li {
-    padding-left: 0; /* Ensures no extra padding on list items */
 }
 
 .ctasection {
