@@ -257,6 +257,7 @@ p {
     padding: 0 10px;
     background-color: #171717;
     margin-top: 10px;
+    text-align: left;
 }
 .card-details.open {
     max-height: 100px; /* Adjust based on the content */
