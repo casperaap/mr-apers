@@ -345,6 +345,8 @@ input:focus {
 .cta-container form {
     width: 100%;
     max-width: 400px;
+    margin-right: 32px;
+    margin-left: 20px;
     margin-top: 48px;
 }
 
@@ -383,12 +385,12 @@ input:focus {
 }
 
 .cta-button {
-    display: inline-block;
+    margin-left: 12px;
+    align-items: center !important;
     height: 51px;
     width: 233px;
     margin-top: 32px;
     margin-bottom: 32px;
-    margin-right: 5px;
     color: white;
     padding: 10px 20px;
     font-size: 1rem;
