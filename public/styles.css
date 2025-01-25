@@ -1026,7 +1026,9 @@ display: none;
     margin-left: 25px;
     margin-top: 48px;
 }
-
+.cta-container .cta-points li span {
+    color: #823DC1;
+}
 .input-container {
     position: relative;
     width: 80%;
