@@ -304,11 +304,14 @@ input:focus {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     border: solid 2px#5e2a8a;
+    
 }
 .cta-container .diff {
     color: #823DC1;
 }
-
+.cta-container .cta-points li span {
+    color: #823DC1;
+}
 .cta-container h2 {
     font-size: 1.6rem;
     margin-top: 19px;
