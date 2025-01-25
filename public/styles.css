@@ -973,7 +973,7 @@ display: none;
     }
 }
 
-cta-container {
+.cta-container {
     position: relative; /* Ensure it appears above the gradient */
     z-index: 2;
     margin-left: 32px;
