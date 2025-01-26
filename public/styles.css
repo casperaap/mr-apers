@@ -984,8 +984,6 @@ display: none;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     border: solid 2px#5e2a8a;
-    display: flex;
-    justify-content: center;
 }
 .cta-container .diff {
     color: #823DC1;
@@ -1025,6 +1023,8 @@ display: none;
     width: 100%;
     max-width: 400px;
     margin: 48px auto;
+    display: flex;
+    justify-content: center;
 }
 
 .cta-container .cta-points li span {
