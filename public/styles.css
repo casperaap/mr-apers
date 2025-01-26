@@ -1022,9 +1022,9 @@ display: none;
 .cta-container form {
     width: 100%;
     max-width: 400px;
-    margin: 48px auto;
-    display: flex;
-    justify-content: center;
+    margin-right: 32px;
+    margin-left: 32px;
+    margin-top: 48px;
 }
 
 .cta-container .cta-points li span {
