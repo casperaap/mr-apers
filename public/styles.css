@@ -984,6 +984,8 @@ display: none;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     border: solid 2px#5e2a8a;
+    display: flex;
+    justify-content: center;
 }
 .cta-container .diff {
     color: #823DC1;
@@ -1005,6 +1007,7 @@ display: none;
 }
 .cta-container .cta-points li {
     margin-left: 32px;
+    margin-left: 32px;
     display: flex;
     align-items: left;
     margin-bottom: 30px;
@@ -1021,10 +1024,9 @@ display: none;
 .cta-container form {
     width: 100%;
     max-width: 400px;
-    margin-right: 32px;
-    margin-left: 32px;
-    margin-top: 48px;
+    margin: 48px auto;
 }
+
 .cta-container .cta-points li span {
     color: #823DC1;
 }
