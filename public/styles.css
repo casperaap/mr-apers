@@ -1030,7 +1030,6 @@ display: none;
     position: relative;
     width: 100%; /* This ensures the container spans the full width */
     max-width: 500px; /* Optionally, set a max-width if needed */
-    margin: 4px auto; /* This keeps the vertical margin and centers it horizontally */
     padding: 0; /* Removes any default padding */
     display: flex; /* Adds flexbox to align children */
     justify-content: center; /* Ensures contents are centered horizontally */
