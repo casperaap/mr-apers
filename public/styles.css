@@ -168,7 +168,7 @@ header {
 
 .hero .content .card .input-container {
     position: relative;
-    margin-bottom: 18px;
+    margin: 4px auto; /* This keeps the vertical margin and centers it horizontally */
     width: 100%; /* Make input container full width */
 }
 
