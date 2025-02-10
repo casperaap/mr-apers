@@ -1023,23 +1023,30 @@ display: none;
 
 
 .cta-container .cta-points li span {
-    color: #823DC1;
+    color: #823DC1;    
 }
+
 .input-container {
     position: relative;
-    width: 80%;
-    margin: 4px auto;
+    width: 100%; /* This ensures the container spans the full width */
+    max-width: 500px; /* Optionally, set a max-width if needed */
+    margin: 4px auto; /* This keeps the vertical margin and centers it horizontally */
+    padding: 0; /* Removes any default padding */
+    display: flex; /* Adds flexbox to align children */
+    justify-content: center; /* Ensures contents are centered horizontally */
+    box-sizing: border-box; /* Ensures padding and borders are included in dimensions */
 }
 
 .input-container input {
-    width: 100%;
-    padding: 12px 10px;
     font-size: 16px;
-    color: #000000;
-    background: #ffffff;
+    width: calc(100% - 32px); /* Subtracts 16px margin from both sides */
+    margin: 0 16px; /* Adds horizontal margin */
+    padding: 12px 10px; /* Vertical padding for text alignment */
     border: 1px solid #ddd;
     border-radius: 5px;
-    outline: none;
+    background-color: #ffffff;
+    color: #000000;
+    box-sizing: border-box; /* Includes padding and border in the width calculation */
 }
 
 .input-container input:focus {
