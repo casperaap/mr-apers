@@ -976,7 +976,8 @@ display: none;
 .cta-container {
     position: relative; /* Ensure it appears above the gradient */
     z-index: 2;
-    margin: 32 auto;
+    margin-left: 32px;
+    margin-right: 32px;
     max-width: 600px;
     background: #171717;
     width: 100%;
