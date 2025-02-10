@@ -1039,10 +1039,10 @@ display: none;
 
 .input-container input,
 .input-container textarea {
-    font-size: 19px;
+    font-size: 16px;
     width: calc(100% - 32px); /* Subtracts 16px margin from both sides */
     margin: 0 16px; /* Adds horizontal margin */
-    padding: 15px; /* Vertical padding for text alignment */
+    padding: 12px 10px; /* Vertical padding for text alignment */
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #ffffff;
@@ -1057,8 +1057,8 @@ display: none;
 .input-container label {
     position: absolute;
     top: 50%;
-    left: 30px;
-    color: #999;
+    left: 10px;
+    color: #aaa;
     pointer-events: none;
     transform: translateY(-50%);
     transition: 0.3s ease all;
@@ -1067,12 +1067,11 @@ display: none;
 }
 
 .input-container input:focus + label,
-.input-container input:not(:placeholder-shown) + label,
-.input-container textarea:focus + label,
-.input-container textarea:not(:placeholder-shown) + label {
-    display: none;
-    font-size: 0.8rem;
-    color: #ffffff;
+.input-container select:focus + label,
+.input-container select:not([value=""]) + label {
+    top: -8px; /* Move label up when focused or typed into */
+    font-size: 12px; /* Make label smaller */
+    opacity: 0;
 }
 
 .cta-button {
