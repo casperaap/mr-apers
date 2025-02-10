@@ -1062,6 +1062,8 @@ display: none;
     pointer-events: none;
     transform: translateY(-50%);
     transition: 0.3s ease all;
+    padding: 0 5px; /* Adds padding around the text */
+
 }
 
 .input-container input:focus + label,
