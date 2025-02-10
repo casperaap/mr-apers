@@ -1070,12 +1070,10 @@ display: none;
 }
 
 .cta-button {
-    margin-left: 12px;
-    align-items: center !important;
+    display: block;
+    margin: 32px auto;
     height: 51px;
     width: 233px;
-    margin-top: 32px;
-    margin-bottom: 32px;
     color: white;
     padding: 10px 20px;
     font-size: 1rem;
