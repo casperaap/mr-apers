@@ -150,12 +150,6 @@ header {
     width: calc(100% - 80px); /* Ensure the card adjusts to screen size */
 }
 
-.input-container {
-    position: relative;
-    width: 80%;
-    margin: 0px !important;
-    margin-bottom: 8px !important;
-}
 
 .hero .content .card h4 {
     color: #C4C4C4;
@@ -1035,6 +1029,7 @@ display: none;
     position: relative;
     width: 80%;
     margin: 20px auto;
+    margin-bottom: 8px;
 }
 
 .input-container input {
