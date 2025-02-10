@@ -389,7 +389,7 @@ p {
 
 .cta-button {
     display: block;
-    margin: 32px auto;
+    margin: 32px auto 0px auto;
     height: 51px;
     width: 233px;
     color: white;
