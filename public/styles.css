@@ -986,7 +986,7 @@ display: none;
 .cta-container h2 {
     text-align: center;
     font-size: 1.6rem;
-    margin-top: 19px;
+    margin-top: 24px;
     margin-bottom: 32px;
     color: #ffffff;
 }
@@ -1075,7 +1075,7 @@ display: none;
 
 .cta-button {
     display: block;
-    margin: 32px auto;
+    margin: 32px auto 32px auto;
     height: 51px;
     width: 233px;
     color: white;
