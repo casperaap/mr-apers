@@ -263,34 +263,20 @@ p {
     max-height: 100px; /* Adjust based on the content */
 
 }
-
 .ctasection {
     padding: 0px 20px;
-    background-size: 100%;
     background: url('assets/background.png') no-repeat top center;
     background-size: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-input {
-    color: grey; /* Default grey for initial and blur states */
-}
-
-input:focus {
-    color: black; /* Changes to black when focused */
-}
 
 @media (max-width: 768px) {
     .ctasection {
-        padding: 70px 0px;
-        background-size: 1440px;
         background-position: 90%;
-    }
-    .projects-section{
-        padding: 70px 0px;
         background-size: 1440px;
-        background-position: 90%;
+        padding: 60px 0px;
     }
 }
 
@@ -317,20 +303,17 @@ input:focus {
     margin-bottom: 32px;
     color: #ffffff;
 }
-.cta-container .cta-points li span {
-    color: #823DC1;
-}
 
 .cta-container .cta-points {
     list-style: none;
     padding: 0;
     margin: 20px 0;
+    
 }
-
 .cta-container .cta-points li {
     margin-left: 32px;
     display: flex;
-    align-items: center;
+    align-items: left;
     margin-bottom: 30px;
     font-size: 14px;
     color: #ffffff;
@@ -343,52 +326,72 @@ input:focus {
 }
 
 .cta-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This will center all child elements */
     width: 100%;
     max-width: 400px;
-    margin-top: 48px;
+    margin: 48px auto; /* Maintains form centering */
+}
+
+
+.cta-container .cta-points li span {
+    color: #823DC1;    
 }
 
 .input-container {
     position: relative;
-    width: 80%;
-    margin: 20px 20px;
+    width: 100%; /* This ensures the container spans the full width */
+    max-width: 500px; /* Optionally, set a max-width if needed */
+    margin: 4px auto; /* This keeps the vertical margin and centers it horizontally */
+    padding: 0; /* Removes any default padding */
+    display: flex; /* Adds flexbox to align children */
+    justify-content: center; /* Ensures contents are centered horizontally */
+    box-sizing: border-box; /* Ensures padding and borders are included in dimensions */
 }
 
 .input-container input {
-    width: 100%;
-    padding: 12px 10px;
     font-size: 16px;
-    color: #000000;
-    background: #ffffff;
+    width: calc(100% - 32px); /* Subtracts 16px margin from both sides */
+    margin: 0 16px; /* Adds horizontal margin */
+    padding: 12px 10px; /* Vertical padding for text alignment */
     border: 1px solid #ddd;
     border-radius: 5px;
-    outline: none;
-    margin-bottom: -100px;
+    background-color: #ffffff;
+    color: #000000;
+    box-sizing: border-box; /* Includes padding and border in the width calculation */
 }
 
+.input-container input:focus {
+    border-color: #823DC1;
+}
 
 .input-container label {
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 10px;
     font-size: 16px;
     color: #aaa;
     pointer-events: none;
     transform: translateY(-50%);
     transition: 0.3s ease all;
+    padding: 0 5px; /* Adds padding around the text */
+
 }
 
-.input-container input:focus + label{
+.input-container input:focus + label,
+.input-container select:focus + label,
+.input-container select:not([value=""]) + label {
+    top: -8px; /* Move label up when focused or typed into */
+    font-size: 12px; /* Make label smaller */
     opacity: 0;
 }
 
 .cta-button {
-    margin-left: 12px;
-    align-items: center !important;
+    display: block;
+    margin: 32px auto;
     height: 51px;
     width: 233px;
-    margin-top: 32px;
-    margin-bottom: 32px;
     color: white;
     padding: 10px 20px;
     font-size: 1rem;
