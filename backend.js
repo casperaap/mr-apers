@@ -71,8 +71,8 @@ app.post('/create-checkout-session', async (req, res) => {
                 },
             ],
             mode: 'payment',
-            success_url: 'https://gothic-myrtia-mrapers-f48b0cd7.koyeb.app/',
-            cancel_url: 'https://gothic-myrtia-mrapers-f48b0cd7.koyeb.app/',
+            success_url: 'https://gothic-myrtia-mrapers-f48b0cd7.koyeb.app/index.html',
+            cancel_url: 'https://gothic-myrtia-mrapers-f48b0cd7.koyeb.app/index.html',
             customer_email: email,
         });
 
