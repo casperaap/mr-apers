@@ -1195,20 +1195,38 @@ display: none;
   color: #C4C4C4;
   font-weight: 550;
 }
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* This applies to screens wider than 768px */
 @media (min-width: 768px) {
   body {
     display: flex;
     justify-content: center;
-    align-items: start; /* Aligns content to the top */
-    min-height: 100vh;
-    padding-top: 50px; /* Adds some space at the top */
-    margin: 0;
-    background-color: #f0f0f0; /* Light grey background */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #f0f0f0; /* Adjust background color as needed */
   }
   .container {
-    width: 375px; /* Width of a typical mobile phone */
-    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Adds depth with shadow */
-    margin-bottom: 50px; /* Adds some space at the bottom */
+    width: 375px; /* Mimics a mobile screen width */
+    overflow-y: auto; /* Enables vertical scrolling */
+    margin-top: 20px; /* Optional: Adds some space at the top */
+    margin-bottom: 20px; /* Optional: Adds some space at the bottom */
   }
 }
 
+/* Ensure all direct children of the container (sections, headers, footers) stack vertically */
+.container > * {
+  width: 100%; /* Each child takes up full container width */
+}
