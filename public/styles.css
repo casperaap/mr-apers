@@ -1195,36 +1195,3 @@ display: none;
   color: #C4C4C4;
   font-weight: 550;
 }
-/* Default mobile styles (your existing code) */
-
-@media (min-width: 768px) {
-  /* Apply these styles ONLY on desktop/tablet screens */
-  body {
-    max-width: 425px; /* Set to your mobile layout's width (e.g., iPhone 12/13) */
-    margin: 0 auto; /* Center the container horizontally */
-    min-height: 100vh;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2); /* Optional: Add a subtle shadow */
-  }
-}
-@media (min-width: 768px) {
-  body {
-    position: relative;
-    max-width: 425px;
-    margin: 20px auto; /* Add space for the frame */
-    background: #fff; /* Ensure content background is white */
-  }
-
-  /* Add a phone frame overlay using a pseudo-element */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 405px; /* Slightly wider than your content */
-    height: calc(100vh + 40px); /* Cover the entire height */
-    background: url('https://example.com/phone-frame-image.png') center/contain no-repeat;
-    pointer-events: none; /* Allow clicks through the frame */
-    z-index: 9999;
-  }
-}
