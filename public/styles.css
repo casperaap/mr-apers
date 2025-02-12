@@ -1195,3 +1195,19 @@ display: none;
   color: #C4C4C4;
   font-weight: 550;
 }
+/* This CSS only applies to screens wider than 768 pixels */
+@media (min-width: 768px) {
+  body {
+    display: flex !important; /* Forces the body to use flex layout, overriding other styles */
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 100vh !important; /* Ensures full viewport height */
+    margin: 0 !important; /* Removes default margin */
+    background-color: #f0f0f0 !important; /* Sets background color */
+  }
+  .container {
+    width: 425px !important; /* Mimics a mobile screen width */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5) !important; /* Adds a shadow for visual depth */
+    margin: auto !important; /* Centers the container horizontally */
+  }
+}
