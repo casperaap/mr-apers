@@ -1195,31 +1195,3 @@ display: none;
   color: #C4C4C4;
   font-weight: 550;
 }
-/* Basic Reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden; /* Prevents horizontal scroll */
-}
-
-/* Base mobile styles */
-.container {
-  width: 375px; /* Base mobile width */
-  margin: 0 auto; /* Center the container */
-  transition: transform 0.3s ease-in-out; /* Smooth transformation */
-}
-
-/* Scaling based on width */
-@media (min-width: 768px) {
-  .container {
-    /* Calculate scale factor, 375 is base width, adjust '375' based on actual base width */
-    transform: scale(calc(100vw / 375));
-    transform-origin: top center; /* Ensures scaling happens smoothly from the top center */
-  }
-}
