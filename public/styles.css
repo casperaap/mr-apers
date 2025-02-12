@@ -1202,31 +1202,24 @@ display: none;
   padding: 0;
 }
 
-body, html {
+html, body {
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
-/* This applies to screens wider than 768px */
+/* Base mobile styles */
+.container {
+  width: 375px; /* Base mobile width */
+  margin: 0 auto; /* Center the container */
+  transition: transform 0.3s ease-in-out; /* Smooth transformation */
+}
+
+/* Scaling based on width */
 @media (min-width: 768px) {
-  body {
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #f0f0f0; /* Adjust background color as needed */
-  }
   .container {
-    width: 375px; /* Mimics a mobile screen width */
-    overflow-y: auto; /* Enables vertical scrolling */
-    margin-top: 20px; /* Optional: Adds some space at the top */
-    margin-bottom: 20px; /* Optional: Adds some space at the bottom */
+    /* Calculate scale factor, 375 is base width, adjust '375' based on actual base width */
+    transform: scale(calc(100vw / 375));
+    transform-origin: top center; /* Ensures scaling happens smoothly from the top center */
   }
-}
-
-/* Ensure all direct children of the container (sections, headers, footers) stack vertically */
-.container > * {
-  width: 100%; /* Each child takes up full container width */
 }
