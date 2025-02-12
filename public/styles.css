@@ -1195,3 +1195,14 @@ display: none;
   color: #C4C4C4;
   font-weight: 550;
 }
+/* Default mobile styles (your existing code) */
+
+@media (min-width: 768px) {
+  /* Apply these styles ONLY on desktop/tablet screens */
+  body {
+    max-width: 375px; /* Set to your mobile layout's width (e.g., iPhone 12/13) */
+    margin: 0 auto; /* Center the container horizontally */
+    min-height: 100vh;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2); /* Optional: Add a subtle shadow */
+  }
+}
